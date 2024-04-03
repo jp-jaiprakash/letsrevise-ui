@@ -8,20 +8,20 @@ on:
 
 jobs:
   deploy-react-app-to-gh-pages:
-    runs-n: ubuntu-latest
+    runs-on: ubuntu-latest
     env:
       EXAMPLE: example # environment variable
     
     steps:
       # checkout the repository content to github runner
       - name: Checkout
-      uses: actions/checkout@v2
+        uses: actions/checkout@v2
 
       # setup nodejs environment
       - name: Setup Node.js environment
-      uses: actions/setup-node@v2.1.5
-      with:
-        node-version: "18.16.1"
+        uses: actions/setup-node@v2.1.5
+        with:
+          node-version: "18.16.1"
       
       # cache the dependencies to speed up the build
       - name: Cache dependencies
