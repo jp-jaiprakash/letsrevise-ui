@@ -13,14 +13,14 @@ jobs:
       EXAMPLE: example # environment variable
     
     steps:
-      # checkout the repository content to github runner
-      - name: Checkout
-        uses: actions/checkout@v4
-
       - name: Eco CI Energy Estimation - Initialize
         uses: green-coding-solutions/eco-ci-energy-estimation@v2
         with:
           task: start-measurement
+      
+      # checkout the repository content to github runner
+      - name: Checkout
+        uses: actions/checkout@v4
       
       # setup nodejs environment
       - name: Setup Node.js environment
@@ -48,12 +48,10 @@ jobs:
         uses: green-coding-solutions/eco-ci-energy-estimation@v2
         with:
           task: get-measurement
-          branch: main
 
       - name: Eco CI Energy Estimation - End Measurement
         uses: green-coding-solutions/eco-ci-energy-estimation@v2
         with:
           task: display-results
-          branch: main
 
 
