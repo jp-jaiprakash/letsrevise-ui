@@ -9,9 +9,6 @@ on:
 jobs:
   deploy-react-app-to-gh-pages:
     runs-on: ubuntu-latest
-    env:
-      EXAMPLE: example # environment variable
-    
     steps:
       - name: Eco CI Energy Estimation - Initialize
         uses: green-coding-solutions/eco-ci-energy-estimation@v2
